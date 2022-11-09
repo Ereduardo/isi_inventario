@@ -8,7 +8,7 @@ if(isset($_SESSION['usuario'])){
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>Poductos</title>
+		<title>articulos</title>
 		<?php require_once "menu.php"; ?>
 		<?php require_once "../clases/Conexion.php"; 
 		$c= new conectar();

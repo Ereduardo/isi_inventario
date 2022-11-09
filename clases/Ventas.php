@@ -48,11 +48,13 @@ class ventas{
 			$d=explode("||", $datos[$i]);
 
 			$sql="INSERT into ventas (id_venta,
+										id_cliente,
 										id_producto,
 										id_usuario,
 										precio,
 										fechaCompra)
 							values ('$idventa',
+									'$d[5]',
 									'$d[0]',
 									'$idusuario',
 									'$d[3]',
@@ -98,7 +100,7 @@ class ventas{
 			return $id + 1;
 		}
 	}
-	/*public function nombreCliente($idCliente){
+	public function nombreCliente($idCliente){
 		$c= new conectar();
 		$conexion=$c->conexion();
 
@@ -110,7 +112,7 @@ class ventas{
 		$ver=mysqli_fetch_row($result);
 
 		return $ver[0]." ".$ver[1];
-	}*/
+	}
 
 	public function obtenerTotal($idventa){
 		$c= new conectar();

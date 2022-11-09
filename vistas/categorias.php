@@ -8,7 +8,7 @@ if(isset($_SESSION['usuario'])){
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>Categorias</title>
+		<title>categorias</title>
 		<?php require_once "menu.php"; ?>
 	</head>
 	<body>

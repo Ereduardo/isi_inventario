@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login de TU INVENTARIO</title>
+	<title>Login de usuario</title>
 	<link rel="icon" href="img/icono.png">
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
 	<script src="librerias/jquery-3.2.1.min.js"></script>
@@ -31,7 +31,7 @@
 				<div class="panel panel-primary">
 					<div class="panel panel-heading">Sistema de ventas y almacen</div>
 					<div class="panel panel-body">
-						<p align ="center">
+						<p align="center">
 							<img src="img/icono.png"  height="190">
 						</p>
 						<form id="frmLogin">

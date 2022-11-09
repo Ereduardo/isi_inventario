@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TU INVENTARIO</title>
+  <title></title>
   <link rel="icon" href="../img/icono.png">
 </head>
 <body style="background: url(../img/fondo.jpg);">

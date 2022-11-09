@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registro de TU INVENTARIO</title>
+	<title>registro</title>
 	<link rel="icon" href="img/icono.png">
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
 	<script src="librerias/jquery-3.2.1.min.js"></script>

@@ -1,9 +1,11 @@
 <?php 
 
 	session_start();
+	//print_r($_SESSION['tablaComprasTemp']);
  ?>
 
  <h4>Hacer venta</h4>
+ <h4><strong><div id="nombreclienteVenta"></div></strong></h4>
  <table class="table table-bordered table-hover table-condensed" style="text-align: center;">
  	<caption>
  		<span class="btn btn-success" onclick="crearVenta()"> Generar venta
@@ -19,6 +21,7 @@
  	</tr>
  	<?php 
  	$total=0;//esta variable tendra el total de la compra en dinero
+ 	$cliente=""; //en esta se guarda el nombre del cliente
  		if(isset($_SESSION['tablaComprasTemp'])):
  			$i=0;
  			foreach (@$_SESSION['tablaComprasTemp'] as $key) {
@@ -51,3 +54,11 @@
  	</tr>
 
  </table>
+
+
+ <script type="text/javascript">
+ 	$(document).ready(function(){
+ 		nombre="<?php echo @$cliente ?>";
+ 		$('#nombreclienteVenta').text("Nombre de cliente: " + nombre);
+ 	});
+ </script>
