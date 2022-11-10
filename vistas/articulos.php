@@ -22,30 +22,37 @@ if(isset($_SESSION['usuario'])){
 		<div class="container" style="background-color:#FFFFFF">
 			<h1>Productos</h1>
 			<div class="row">
-				<div class="col-sm-4">
-					<form id="frmArticulos" enctype="multipart/form-data">
-						<label>Categoria</label>
-						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
-							<option value="A">Selecciona Categoria</option>
-							<?php while($ver=mysqli_fetch_row($result)): ?>
-								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
-							<?php endwhile; ?>
-						</select>
-						<label>Nombre</label>
-						<input type="text" class="form-control input-sm" id="nombre" name="nombre">
-						<label>Descripcion</label>
-						<input type="text" class="form-control input-sm" id="descripcion" name="descripcion">
-						<label>Cantidad</label>
-						<input type="text" class="form-control input-sm" id="cantidad" name="cantidad">
-						<label>Precio</label>
-						<input type="text" class="form-control input-sm" id="precio" name="precio">
-						<label>Imagen</label>
-						<input type="file" id="imagen" name="imagen">
-						<p></p>
-						<span id="btnAgregaArticulo" class="btn btn-primary">Agregar</span>
-						
-					</form>
-				</div>
+				<?php
+					if($_SESSION['usuario']=="admin"):
+				?>
+					<div class="col-sm-4">
+						<form id="frmArticulos" enctype="multipart/form-data">
+							<label>Categoria</label>
+							<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
+								<option value="A">Selecciona Categoria</option>
+								<?php while($ver=mysqli_fetch_row($result)): ?>
+									<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+								<?php endwhile; ?>
+							</select>
+							<label>Nombre</label>
+							<input type="text" class="form-control input-sm" id="nombre" name="nombre">
+							<label>Descripcion</label>
+							<input type="text" class="form-control input-sm" id="descripcion" name="descripcion">
+							<label>Cantidad</label>
+							<input type="text" class="form-control input-sm" id="cantidad" name="cantidad">
+							<label>Precio</label>
+							<input type="text" class="form-control input-sm" id="precio" name="precio">
+							<label>Imagen</label>
+							<input type="file" id="imagen" name="imagen">
+							<p></p>
+							<span id="btnAgregaArticulo" class="btn btn-primary">Agregar</span>
+							
+						</form>
+					</div>
+				<?php 
+					endif;
+				?>
+
 				<div class="col-sm-8">
 					<div id="tablaArticulosLoad"></div>
 				</div>
@@ -55,47 +62,54 @@ if(isset($_SESSION['usuario'])){
 
 		<!-- Button trigger modal -->
 		
-		<!-- Modal -->
-		<div class="modal fade" id="abremodalUpdateArticulo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog modal-sm" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Actualiza Productos</h4>
-					</div>
-					<div class="modal-body">
-						<form id="frmArticulosU" enctype="multipart/form-data">
-							<input type="text" id="idArticulo" hidden="" name="idArticulo">
-							<label>Categoria</label>
-							<select class="form-control input-sm" id="categoriaSelectU" name="categoriaSelectU">
-								<option value="A">Selecciona Categoria</option>
-								<?php 
-								$sql="SELECT id_categoria,nombreCategoria
-								from categorias";
-								$result=mysqli_query($conexion,$sql);
-								?>
-								<?php while($ver=mysqli_fetch_row($result)): ?>
-									<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
-								<?php endwhile; ?>
-							</select>
-							<label>Nombre</label>
-							<input type="text" class="form-control input-sm" id="nombreU" name="nombreU">
-							<label>Descripcion</label>
-							<input type="text" class="form-control input-sm" id="descripcionU" name="descripcionU">
-							<label>Cantidad</label>
-							<input type="text" class="form-control input-sm" id="cantidadU" name="cantidadU">
-							<label>Precio</label>
-							<input type="text" class="form-control input-sm" id="precioU" name="precioU">
-							
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button id="btnActualizaarticulo" type="button" class="btn btn-warning" data-dismiss="modal">Actualizar</button>
+		<!--metodo para editar los productos-->
+			<?php
+					if($_SESSION['usuario']=="admin"):
+				?>
+					<div class="modal fade" id="abremodalUpdateArticulo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog modal-sm" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Actualiza Productos</h4>
+								</div>
+								<div class="modal-body">
+									<form id="frmArticulosU" enctype="multipart/form-data">
+										<input type="text" id="idArticulo" hidden="" name="idArticulo">
+										<label>Categoria</label>
+										<select class="form-control input-sm" id="categoriaSelectU" name="categoriaSelectU">
+											<option value="A">Selecciona Categoria</option>
+											<?php 
+											$sql="SELECT id_categoria,nombreCategoria
+											from categorias";
+											$result=mysqli_query($conexion,$sql);
+											?>
+											<?php while($ver=mysqli_fetch_row($result)): ?>
+												<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+											<?php endwhile; ?>
+										</select>
+										<label>Nombre</label>
+										<input type="text" class="form-control input-sm" id="nombreU" name="nombreU">
+										<label>Descripcion</label>
+										<input type="text" class="form-control input-sm" id="descripcionU" name="descripcionU">
+										<label>Cantidad</label>
+										<input type="text" class="form-control input-sm" id="cantidadU" name="cantidadU">
+										<label>Precio</label>
+										<input type="text" class="form-control input-sm" id="precioU" name="precioU">
+										
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button id="btnActualizaarticulo" type="button" class="btn btn-warning" data-dismiss="modal">Actualizar</button>
 
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
+				<?php 
+					endif;
+				?>
+
 
 	</body>
 	</html>
@@ -120,25 +134,34 @@ if(isset($_SESSION['usuario'])){
 			});
 		}
 
-		function eliminaArticulo(idArticulo){
-			alertify.confirm('¿Desea eliminar este producto?', function(){ 
-				$.ajax({
-					type:"POST",
-					data:"idarticulo=" + idArticulo,
-					url:"../procesos/articulos/eliminarArticulo.php",
-					success:function(r){
-						if(r==1){
-							$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
-							alertify.success("Eliminado con exito!!");
-						}else{
-							alertify.error("No se pudo eliminar :(");
+		//metodo para eliminar los productos
+		<?php
+			if($_SESSION['usuario']=="admin"):
+		?>
+			function eliminaArticulo(idArticulo){
+				alertify.confirm('¿Desea eliminar este producto?', function(){ 
+					$.ajax({
+						type:"POST",
+						data:"idarticulo=" + idArticulo,
+						url:"../procesos/articulos/eliminarArticulo.php",
+						success:function(r){
+							if(r==1){
+								$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
+								alertify.success("Eliminado con exito!!");
+							}else{
+								alertify.error("No se pudo eliminar :(");
+							}
 						}
-					}
+					});
+				}, function(){ 
+					alertify.error('Cancelo !')
 				});
-			}, function(){ 
-				alertify.error('Cancelo !')
-			});
-		}
+			}		
+		<?php 
+			endif;
+		?>
+
+
 	</script>
 
 	<script type="text/javascript">

@@ -11,19 +11,6 @@ $conexion=$c->conexion();
 <h4>.Vender un producto</h4>
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
-			<label >Seleciona Cliente</label>
-			<select class="form-control input-sm" id="clienteVenta" name="clienteVenta">
-				<option value="A">Selecciona</option>
-				<option value="0">Sin cliente</option>
-				<?php
-				$sql="SELECT id_cliente,nombre,apellido 
-				from clientes";
-				$result=mysqli_query($conexion,$sql);
-				while ($cliente=mysqli_fetch_row($result)):
-					?>
-					<option value="<?php echo $cliente[0] ?>"><?php echo " ".$cliente[1].$cliente[2] ?></option>
-				<?php endwhile; ?>
-			</select>
 			<label>Producto</label>
 			<select class="form-control input-sm" id="productoVenta" name="productoVenta">
 				<option value="A">Selecciona</option>
@@ -110,6 +97,7 @@ $conexion=$c->conexion();
 	});
 
 	});
+	
 </script>
 
 <script type="text/javascript">

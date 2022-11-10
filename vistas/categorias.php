@@ -15,47 +15,59 @@ if(isset($_SESSION['usuario'])){
 
 		<div class="container" style="background-color:#FFFFFF">
 			<h1>Categorias</h1>
-			<div class="row">
-				<div class="col-sm-4">
-					<form id="frmCategorias">
-						<label>Categoria</label>
-						<input type="text" class="form-control input-sm" name="categoria" id="categoria">
-						<p></p>
-						<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>
-					</form>
-				</div>
+				<?php
+				if($_SESSION['usuario']=="admin"):
+				?>
+					<div class="row">
+						<div class="col-sm-4">
+							<form id="frmCategorias">
+								<label>Categoria</label>
+								<input type="text" class="form-control input-sm" name="categoria" id="categoria">
+								<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>
+							</form>
+							<br>
+					</div>
+				<?php 
+				endif;
+				?>
 				<div class="col-sm-6">
 					<div id="tablaCategoriaLoad"></div>
 				</div>
-			</div>
 		</div>
 
 		<!-- Button trigger modal -->
 
-		<!-- Modal -->
-		<div class="modal fade" id="actualizaCategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog modal-sm" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Actualiza categorias</h4>
-					</div>
-					<div class="modal-body">
-						<form id="frmCategoriaU">
-							<input type="text" hidden="" id="idcategoria" name="idcategoria">
-							<label>Categoria</label>
-							<input type="text" id="categoriaU" name="categoriaU" class="form-control input-sm">
-						</form>
+		<!--metodo para editar las categorias-->
+		<?php
+              if($_SESSION['usuario']=="admin"):
+            ?>
+                <div class="modal fade" id="actualizaCategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-sm" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Actualiza categorias</h4>
+							</div>
+							<div class="modal-body">
+								<form id="frmCategoriaU">
+									<input type="text" hidden="" id="idcategoria" name="idcategoria">
+									<label>Categoria</label>
+									<input type="text" id="categoriaU" name="categoriaU" class="form-control input-sm">
+								</form>
 
 
-					</div>
-					<div class="modal-footer">
-						<button type="button" id="btnActualizaCategoria" class="btn btn-warning" data-dismiss="modal">Guardar</button>
+							</div>
+							<div class="modal-footer">
+								<button type="button" id="btnActualizaCategoria" class="btn btn-warning" data-dismiss="modal">Guardar</button>
 
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+            <?php 
+            endif;
+            ?>
+
 
 	</body>
 	</html>
@@ -122,25 +134,35 @@ if(isset($_SESSION['usuario'])){
 			$('#categoriaU').val(categoria);
 		}
 
-		function eliminaCategoria(idcategoria){
-			alertify.confirm('¿Desea eliminar esta categoria?', function(){ 
-				$.ajax({
-					type:"POST",
-					data:"idcategoria=" + idcategoria,
-					url:"../procesos/categorias/eliminarCategoria.php",
-					success:function(r){
-						if(r==1){
-							$('#tablaCategoriaLoad').load("categorias/tablaCategorias.php");
-							alertify.success("Eliminado con exito!!");
-						}else{
-							alertify.error("No se pudo eliminar :(");
-						}
-					}
-				});
-			}, function(){ 
-				alertify.error('Cancelo !')
-			});
-		}
+		//metodo para eliminar las categorias
+		<?php
+              if($_SESSION['usuario']=="admin"):
+            ?>
+                function eliminaCategoria(idcategoria){
+					alertify.confirm('¿Desea eliminar esta categoria?', function(){ 
+						$.ajax({
+							type:"POST",
+							data:"idcategoria=" + idcategoria,
+							url:"../procesos/categorias/eliminarCategoria.php",
+							success:function(r){
+								if(r==1){
+									$('#tablaCategoriaLoad').load("categorias/tablaCategorias.php");
+									alertify.success("Eliminado con exito!!");
+								}else{
+									alertify.error("No se pudo eliminar :(");
+								}
+							}
+						});
+					}, function(){ 
+						alertify.error('Cancelo !')
+					});
+				}
+            <?php 
+            endif;
+            ?>
+
+
+	
 	</script>
 	<?php 
 }else{
