@@ -8,7 +8,7 @@ $conexion=$c->conexion();
 
 
 <div class="row" style="background-color:#FFFFFF">
-<h4>.Vender un producto</h4>
+<h4>&nbspVender un producto</h4>
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
 			<label>Producto</label>
@@ -39,6 +39,7 @@ $conexion=$c->conexion();
 	</div>
 	<div class="col-sm-3">
 		<div id="imgProducto"></div>
+		
 	</div>
 	<div class="col-sm-4">
 		<div id="tablaVentasTempLoad"></div>
@@ -49,7 +50,7 @@ $conexion=$c->conexion();
 	$(document).ready(function(){
 
 		$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
-
+		
 		$('#productoVenta').change(function(){
 			$.ajax({
 				type:"POST",
@@ -61,15 +62,16 @@ $conexion=$c->conexion();
 					$('#descripcionV').val(dato['descripcion']);
 					$('#cantidadV').val(dato['cantidad']);
 					$('#precioV').val(dato['precio']);
-
+					
 					$('#imgProducto').prepend('<img class="img-thumbnail" id="imgp" src="' + dato['ruta'] + '" />');
+					var x = document.getElementById("imgProducto");
+				    x.style.display = "block";
 				}
 			});
 		});
 
 		$('#btnAgregaVenta').click(function(){
 			vacios=validarFormVacio('frmVentasProductos');
-
 			if(vacios > 0){
 				alertify.alert("Debes llenar todos los campos!!");
 				return false;
@@ -87,11 +89,12 @@ $conexion=$c->conexion();
 		});
 
 		$('#btnVaciarVentas').click(function(){
-
+			
 		$.ajax({
 			url:"../procesos/ventas/vaciarTemp.php",
 			success:function(r){
 				$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
+
 			}
 		});
 	});
@@ -121,6 +124,8 @@ $conexion=$c->conexion();
 					$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
 					$('#frmVentasProductos')[0].reset();
 					alertify.alert("Venta creada con exito, consulte la informacion de esta en ventas hechas :D");
+					var x = document.getElementById("imgProducto");
+				x.style.display = "none";
 				}else if(r==0){
 					alertify.alert("No hay lista de venta!!");
 				}else{
@@ -135,6 +140,7 @@ $conexion=$c->conexion();
 	$(document).ready(function(){
 		
 		$('#productoVenta').select2();
+		
 
 	});
 </script>

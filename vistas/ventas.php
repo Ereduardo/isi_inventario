@@ -14,7 +14,7 @@
 <body>
 
 	<div class="container">
-		 <h1 style="background-color:#FFFFFF">.Venta de productos</h1>
+		 <h1 style="color:WHITE">Venta de productos</h1>
 		 <div class="row">
 		 	<div class="col-sm-12">
 		 		<span class="btn btn-default" id="ventaProductosBtn">Vender producto</span>
