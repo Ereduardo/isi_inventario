@@ -35,6 +35,7 @@ class ventas{
 	}
 
 	public function crearVenta(){
+		
 		$c= new conectar();
 		$conexion=$c->conexion();
 
