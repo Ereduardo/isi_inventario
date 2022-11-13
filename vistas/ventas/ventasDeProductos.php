@@ -133,7 +133,7 @@ $conexion=$c->conexion();
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#clienteVenta').select2();
+		
 		$('#productoVenta').select2();
 
 	});

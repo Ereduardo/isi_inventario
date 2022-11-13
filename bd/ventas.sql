@@ -11,7 +11,6 @@ create table usuarios(
 				fechaCaptura date,
 				primary key(id_usuario)
 					);
-
 create table categorias (
 				id_categoria int auto_increment,
 				id_usuario int not null,
@@ -19,7 +18,6 @@ create table categorias (
 				fechaCaptura date,
 				primary key(id_categoria)
 						);
-
 create table imagenes(
 				id_imagen int auto_increment,
 				id_categoria int not null,
@@ -41,22 +39,8 @@ create table articulos(
 				primary key(id_producto)
 
 						);
-
-create table clientes(
-				id_cliente int auto_increment,
-				id_usuario int not null,
-				nombre varchar(200),
-				apellido varchar(200),
-				direccion varchar(200),
-				email varchar(200),
-				telefono varchar(200),
-				rfc varchar(200),
-				primary key(id_cliente)
-					);
--- Recuerda agregar el id de usuario por favor 
 create table ventas(
 				id_venta int not null,
-				id_cliente int,
 				id_producto int,
 				id_usuario int,
 				precio float,
