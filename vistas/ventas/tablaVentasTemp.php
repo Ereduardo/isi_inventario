@@ -1,7 +1,6 @@
 <?php 
 
 	session_start();
-	//print_r($_SESSION['tablaComprasTemp']);
  ?>
 
  <h4>Hacer venta</h4>

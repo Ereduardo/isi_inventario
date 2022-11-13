@@ -48,13 +48,11 @@ class ventas{
 			$d=explode("||", $datos[$i]);
 
 			$sql="INSERT into ventas (id_venta,
-										
 										id_producto,
 										id_usuario,
 										precio,
 										fechaCompra)
 							values ('$idventa',
-									
 									'$d[0]',
 									'$idusuario',
 									'$d[3]',

@@ -23,25 +23,31 @@
 				<tr>
 					<td>Venta</td>
 					<td>Fecha</td>
-					<td>Productos</td>
-					<td># productos</td>
 					<td>Total de compra</td>
+					<td>Factura</td>
+					<td>Reporte</td>
+					
 				</tr>
 		<?php while($ver=mysqli_fetch_row($result)): ?>
 				<tr>
 					<td><?php echo $ver[0] ?></td>
 					<td><?php echo $ver[1] ?></td>
 					<td>
-						producto
-					</td>
-					<td>
-						cantidad
-					</td>
-					<td>
 						<?php 
 							echo "$".$obj->obtenerTotal($ver[0]);
 						 ?>
 					</td>
+					<td>
+					<a href="../procesos/ventas/crearTicketPdf.php?idventa=<?php echo $ver[0] ?>" class="btn btn-danger btn-sm">
+							Factura <span class="glyphicon glyphicon-list-alt"></span>
+						</a>
+					</td>
+					<td>
+						<a href="../procesos/ventas/crearReportePdf.php?idventa=<?php echo $ver[0] ?>" class="btn btn-danger btn-sm">
+							Reporte <span class="glyphicon glyphicon-file"></span>
+						</a>
+					</td>
+					
 				</tr>
 		<?php endwhile; ?>
 			</table>
