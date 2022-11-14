@@ -1,5 +1,5 @@
 <?php 
-
+	
 class ventas{
 	public function obtenDatosProducto($idproducto){
 		$c=new conectar();

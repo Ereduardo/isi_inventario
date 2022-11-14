@@ -15,7 +15,7 @@
 
 
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	<caption><label>Usuarios :)</label></caption>
+	<caption><label>Usuarios</label></caption>
 	<tr>
 		<td>Nombre</td>
 		<td>Apellido</td>

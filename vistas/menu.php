@@ -52,32 +52,8 @@
           </ul>
 
       </div>
-      <!--/.nav-collapse -->
     </div>
-    <!--/.contatiner -->
   </div>
 </div>
-<!-- Main jumbotron for a primary marketing message or call to action -->
-
-
-
-
-
-<!-- /container -->        
-
-
 </body>
 </html>
-
-<script type="text/javascript">
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 150) {
-      $('.logo').height(200);
-
-    }
-    else {
-      $('.logo').height(100);
-    }
-  }
-  );
-</script>

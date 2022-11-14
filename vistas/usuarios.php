@@ -113,6 +113,12 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#btnActualizaUsuario').click(function(){
+				vacios=validarFormVacio('frmRegistroU');
+
+				if(vacios > 0){
+					alertify.alert("Debes llenar todos los campos!!");
+					return false;
+				}
 
 				datos=$('#frmRegistroU').serialize();
 				$.ajax({

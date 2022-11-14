@@ -58,10 +58,7 @@ if(isset($_SESSION['usuario'])){
 				</div>
 			</div>
 			<br>
-		</div>
-
-		<!-- Button trigger modal -->
-		
+		</div>		
 		<!--metodo para editar los productos-->
 			<?php
 					if($_SESSION['usuario']=="admin"):
@@ -167,6 +164,12 @@ if(isset($_SESSION['usuario'])){
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#btnActualizaarticulo').click(function(){
+				vacios=validarFormVacio('frmArticulosU');
+
+				if(vacios > 0){
+					alertify.alert("Debes llenar todos los campos!!");
+					return false;
+				}
 
 				datos=$('#frmArticulosU').serialize();
 				$.ajax({

@@ -1,5 +1,5 @@
 <?php 
-	
+	require_once "vistas/dependencias.php";
 	require_once "clases/Conexion.php";
 	$obj= new conectar();
 	$conexion=$obj->conexion();
