@@ -38,8 +38,8 @@ class ventas{
 		
 		$c= new conectar();
 		$conexion=$c->conexion();
-
-		$fecha=date('Y-m-d');
+		date_default_timezone_set('America/Lima');
+		$fecha=date('Y-m-d  h:i:s');
 		$idventa=self::creaFolio();
 		$datos=$_SESSION['tablaComprasTemp'];
 		$idusuario=$_SESSION['iduser'];

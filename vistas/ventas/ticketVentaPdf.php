@@ -3,8 +3,6 @@
 	require_once "../../clases/Ventas.php";
 
 	$objv= new ventas();
-
-
 	$c=new conectar();
 	$conexion= $c->conexion();	
 	$idventa=$_GET['idventa'];
@@ -31,7 +29,7 @@ $result=mysqli_query($conexion,$sql);
  <!DOCTYPE html>
  <html>
  <head>
- 	<title>Reporte de venta</title>
+ 	<title>Factura de venta</title>
  	<style type="text/css">
 		
 @page {
@@ -55,7 +53,7 @@ $result=mysqli_query($conexion,$sql);
  		
  		<table style="border-collapse: collapse;" border="1">
  			<tr>
- 				<td>Nombre</td>
+ 				<td>Producto</td>
  				<td>Precio</td>
  			</tr>
  			<?php 

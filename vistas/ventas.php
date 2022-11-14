@@ -17,8 +17,8 @@
 		 <h1 style="color:WHITE">Venta de productos</h1>
 		 <div class="row">
 		 	<div class="col-sm-12">
-		 		<span class="btn btn-default" id="ventaProductosBtn">Vender producto</span>
-		 		<span class="btn btn-default" id="ventasHechasBtn">Ventas hechas</span>
+		 		<span class="btn btn-default" id="ventaProductosBtn">Vender</span>
+		 		<span class="btn btn-default" id="ventasHechasBtn">Historial de ventas</span>
 		 	</div>
 		 </div>
 		 <div class="row">

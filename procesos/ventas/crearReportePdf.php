@@ -4,7 +4,6 @@ require_once '../../librerias/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 
 $id=$_GET['idventa'];
-// Introducimos HTML de prueba
 function file_get_contents_curl($url) {
     $ch = curl_init();
 

@@ -3,8 +3,6 @@
 	require_once "../../clases/Ventas.php";
 
 	$objv= new ventas();
-
-
 	$c=new conectar();
 	$conexion= $c->conexion();	
 	$idventa=$_GET['idventa'];
@@ -42,7 +40,7 @@ $result=mysqli_query($conexion,$sql);
  				<td>Fecha: <?php echo $fecha; ?></td>
  			</tr>
  			<tr>
- 				<td>Folio: <?php echo $folio ?></td>
+ 				<td>Venta #: <?php echo $folio ?></td>
  			</tr>
 
  		</table>

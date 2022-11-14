@@ -8,7 +8,7 @@ $conexion=$c->conexion();
 
 
 <div class="row" style="background-color:#FFFFFF">
-<h4>&nbspVender un producto</h4>
+<h4>Vender un producto</h4>
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
 			<label>Producto</label>
