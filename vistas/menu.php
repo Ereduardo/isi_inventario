@@ -13,7 +13,7 @@
   <div id="nav">
     <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
       <div class="container">
-        <h1 style="color:#FFFFFF" >TU INVENTARIO</h1>
+        <h1><img src="../img/logo.png"  height="50" alt="Foto de logo no encontrada"></h1>
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-left">
