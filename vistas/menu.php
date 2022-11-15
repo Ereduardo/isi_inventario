@@ -20,8 +20,6 @@
 
               <li class="active"><a href="ventas.php"><span class="glyphicon glyphicon-home"></span> Inicio</a>
               </li>
-
-              
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>Productos<span class="caret"></span></a>

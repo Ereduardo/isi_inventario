@@ -30,8 +30,9 @@ class ventas{
 			'cantidad' => $ver[2],
 			'ruta' => $img,
 			'precio' => $ver[4]
-		);		
-		return $data;
+		);	
+		if($ver[2] > 0){
+		return $data;}
 	}
 
 	public function crearVenta(){

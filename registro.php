@@ -30,7 +30,7 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class="panel panel-danger">
-					<div class="panel panel-heading">Registrar Administrador</div>
+					<div class="panel panel-heading">REGISTRO DE OrdenX</div>
 					<div class="panel panel-body">
 						<p align="center">
 							<img src="img/icono.png"  height="190">

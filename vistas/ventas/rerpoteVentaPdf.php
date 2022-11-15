@@ -33,13 +33,11 @@ $result=mysqli_query($conexion,$sql);
  	<link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/bootstrap.css">
  </head>
  <body>
-
-
- <p align="center">
-							<img src="../../img/fondo.jpg"  height="190">
-						</p>
-		<h4 >Hola</h4>
- 		
+		<div align="center">
+		<h3>Reporte de venta</h3>
+		<h3>Estos son los productos vendidos</h3>
+		<h3>con fecha y hora de la venta</h3>
+		</div>
  		<br>
  		<table class="table">
  			<tr>

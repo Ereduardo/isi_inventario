@@ -43,7 +43,13 @@ $result=mysqli_query($conexion,$sql);
 
  </head>
  <body>
- 		<p>Factura impresa por OrdenX</p>
+ 		
+		<div align="center">
+		<h5>FACTURA DE VENTA</h5>
+		<h5>ESTOS SON LOS PRODUCTOS VENDIDOS</h5>
+		<h5>CON FECHA Y HORA DE LA VENTA</h5>
+		<p>FACTURA IMPRESA POR OrdenX</p>
+		</div>
  		<p>
  			Fecha: <?php echo $fecha; ?>
  		</p>
