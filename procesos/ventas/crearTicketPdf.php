@@ -18,7 +18,7 @@ function file_get_contents_curl($url) {
     return $data;
 }
 
- $html=file_get_contents("http://localhost/isi_inventario/vistas/ventas/ticketVentaPdf.php?idventa=".$id);
+ $html=file_get_contents("http://ordenx.epizy.com/isi_inventario/vistas/ventas/ticketVentaPdf.php?idventa=".$id);
 
 
  
