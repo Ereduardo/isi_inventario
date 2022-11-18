@@ -8,14 +8,14 @@ create table usuarios(
 				apellido varchar(50),
 				email varchar(50),
 				password text(50),
-				fechaCaptura date,
+				fechaCaptura datetime,
 				primary key(id_usuario)
 					);
 create table categorias (
 				id_categoria int auto_increment,
 				id_usuario int not null,
 				nombreCategoria varchar(150),
-				fechaCaptura date,
+				fechaCaptura datetime,
 				primary key(id_categoria)
 						);
 create table imagenes(
@@ -23,7 +23,7 @@ create table imagenes(
 				id_categoria int not null,
 				nombre varchar(500),
 				ruta varchar(500),
-				fechaSubida date,
+				fechaSubida datetime,
 				primary key(id_imagen)
 					);
 create table articulos(
@@ -35,7 +35,7 @@ create table articulos(
 				descripcion varchar(500),
 				cantidad int,
 				precio float,
-				fechaCaptura date,
+				fechaCaptura datetime,
 				primary key(id_producto)
 
 						);

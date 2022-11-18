@@ -7,6 +7,15 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 	<head>
 		<title>usuarios</title>
 		<?php require_once "menu.php"; ?>
+		<style>
+			body {
+				background: url("../img/fondo.jpg"); 
+				background-size: contain;
+				background-repeat: repeat;
+				margin: 0;
+				height: 100vh;
+			}
+  </style>
 	</head>
 	<body>
 		<div class="container" style="background-color:#FFFFFF">

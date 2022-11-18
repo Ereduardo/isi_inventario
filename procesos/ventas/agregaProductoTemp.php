@@ -17,12 +17,18 @@
 	$result=mysqli_query($conexion,$sql);
 
 	$nombreproducto=mysqli_fetch_row($result)[0];
+		
+			if($cantidad >= 1){
+				$cantidad--;
+				$parar++;
 
-	$articulo=$idproducto."||".
-				$nombreproducto."||".
-				$descripcion."||".
-				$precio;
+			$articulo=$idproducto."||".
+						$nombreproducto."||".
+						$descripcion."||".
+						$precio;
+			
+			$_SESSION['tablaComprasTemp'][]=$articulo;
 
-	$_SESSION['tablaComprasTemp'][]=$articulo;
-
+			}
+		
  ?>

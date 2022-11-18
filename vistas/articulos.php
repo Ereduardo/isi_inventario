@@ -10,17 +10,28 @@ if(isset($_SESSION['usuario'])){
 	<head>
 		<title>articulos</title>
 		<?php require_once "menu.php"; ?>
-		<?php require_once "../clases/Conexion.php"; 
+		<?php require_once "../clases/Conexion.php";
+		require_once "dependencias.php"; 
 		$c= new conectar();
 		$conexion=$c->conexion();
 		$sql="SELECT id_categoria,nombreCategoria
 		from categorias";
 		$result=mysqli_query($conexion,$sql);
 		?>
+		<style>
+			body {
+			background: url("../img/fondo.jpg"); 
+			background-size: cover;
+			background-repeat: repeat;
+			margin: 0;
+			height: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container" style="background-color:#FFFFFF">
-			<h1>Productos</h1>
+			<h3><b>AGREGA UN</b></h3>
+			<h3><b>PRODUCTO NUEVO</b></h3>
 			<div class="row">
 				<?php
 					if($_SESSION['usuario']=="admin"):
@@ -34,18 +45,18 @@ if(isset($_SESSION['usuario'])){
 									<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 								<?php endwhile; ?>
 							</select>
-							<label>Nombre</label>
+							<label>Nombre Del Producto</label>
 							<input type="text" class="form-control input-sm" id="nombre" name="nombre">
-							<label>Descripcion</label>
+							<label>Descripcion Del Prodcuto</label>
 							<input type="text" class="form-control input-sm" id="descripcion" name="descripcion">
-							<label>Cantidad</label>
+							<label>Cantidad Disponible</label>
 							<input type="text" class="form-control input-sm" id="cantidad" name="cantidad">
-							<label>Precio</label>
+							<label>Precio Del Producto</label>
 							<input type="text" class="form-control input-sm" id="precio" name="precio">
-							<label>Imagen</label>
+							<label>Imagen De Referencia</label>
 							<input type="file" id="imagen" name="imagen">
 							<p></p>
-							<span id="btnAgregaArticulo" class="btn btn-primary">Agregar</span>
+							<span id="btnAgregaArticulo" class="btn btn-primary">AGREGAR EL PRODUCTO</span>
 							
 						</form>
 					</div>
@@ -68,7 +79,7 @@ if(isset($_SESSION['usuario'])){
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="myModalLabel">Actualiza Productos</h4>
+									<h4 class="modal-title" id="myModalLabel">Actualizar Productos</h4>
 								</div>
 								<div class="modal-body">
 									<form id="frmArticulosU" enctype="multipart/form-data">
@@ -85,11 +96,11 @@ if(isset($_SESSION['usuario'])){
 												<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 											<?php endwhile; ?>
 										</select>
-										<label>Nombre</label>
+										<label>Nombre Del Producto</label>
 										<input type="text" class="form-control input-sm" id="nombreU" name="nombreU">
 										<label>Descripcion</label>
 										<input type="text" class="form-control input-sm" id="descripcionU" name="descripcionU">
-										<label>Cantidad</label>
+										<label>Cantidad Disponible</label>
 										<input type="text" class="form-control input-sm" id="cantidadU" name="cantidadU">
 										<label>Precio</label>
 										<input type="text" class="form-control input-sm" id="precioU" name="precioU">

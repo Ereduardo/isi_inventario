@@ -6,26 +6,25 @@
 <head>
   <title></title>
   <link rel="icon" href="../img/icono.png">
+  
 </head>
-<body style="background: url(../img/fondo.jpg);">
-
-  <!-- Begin Navbar -->
-  <div id="nav">
+<body>
+ <div>
     <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
       <div class="container">
-        <h1><img src="../img/logo.png"  height="50" alt="Foto de logo no encontrada"></h1>
+        <a title="INICio" href="inicio.php"><img src="../img/logo.png" height="50" alt="Foto de logo no encontrada"/></a>
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-left">
 
-              <li class="active"><a href="ventas.php"><span class="glyphicon glyphicon-home"></span> Inicio</a>
+              <li class="active"><a href="ventas.php"><span class="glyphicon glyphicon-home"></span> VENTAS</a>
               </li>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>Productos<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> INVENTARIO<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="categorias.php">Categorias</a></li>
-                  <li><a href="articulos.php">Productos</a></li>
+                  <li><a href="categorias.php">CATEGORIA DE PRODUCTOS</a></li>
+                  <li><a href="articulos.php">PRODUCTOS DISPONIBLES</a></li>
                 </ul>
               </li>              
           </ul>
@@ -49,9 +48,9 @@
               </li>  
           </ul>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 </body>
 </html>

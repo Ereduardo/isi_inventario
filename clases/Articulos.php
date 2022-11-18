@@ -24,7 +24,9 @@
 			$c=new conectar();
 			$conexion=$c->conexion();
 
-			$fecha=date('Y-m-d');
+			
+			date_default_timezone_set('America/Lima');
+			$fecha=date('Y-m-d  h:i:s');
 
 			$sql="INSERT into articulos (id_categoria,
 										id_imagen,

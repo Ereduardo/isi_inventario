@@ -10,6 +10,15 @@ if(isset($_SESSION['usuario'])){
 	<head>
 		<title>categorias</title>
 		<?php require_once "menu.php"; ?>
+		<style>
+    body {
+      background: url("../img/fondo.jpg"); 
+      background-size: cover;
+      background-repeat: repeat;
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
 	</head>
 	<body>
 

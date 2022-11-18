@@ -10,11 +10,20 @@
 <head>
 	<title>ventas</title>
 	<?php require_once "menu.php"; ?>
+	<style>
+    body {
+      	background: url("../img/fVentas.jpg"); 
+      	background-size: contain;
+		background-repeat: repeat;
+    	margin: 0;
+      	height: 100vh;
+    }
+  </style>
 </head>
 <body>
 
 	<div class="container">
-		 <h1 style="color:WHITE">Venta de productos</h1>
+		 <h1 style="color:black"><span style="background-color:#FFFFFF">Venta de productos</span></h1>
 		 <div class="row">
 		 	<div class="col-sm-12">
 		 		<span class="btn btn-default" id="ventaProductosBtn">Vender</span>

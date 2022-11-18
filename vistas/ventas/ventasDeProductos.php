@@ -24,6 +24,7 @@ $conexion=$c->conexion();
 					?>
 					<option value="<?php echo $producto[0] ?>"><?php echo $producto[1] ?></option>
 				<?php endwhile; ?>
+				$parar =  0;
 			</select>
 			<label>Descripcion</label>
 			<textarea readonly="" id="descripcionV" name="descripcionV" class="form-control input-sm"></textarea>
