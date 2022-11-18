@@ -22,14 +22,15 @@ if(isset($_SESSION['usuario'])){
 	</head>
 	<body>
 
-		<div class="container" style="background-color:#FFFFFF">
-			<h1>Categorias</h1>
+		<div class="container" >
+			<h1><span style="background-color:#FFFFFF">Categorias</span></h1>
 				<?php
 				if($_SESSION['usuario']=="admin"):
 				?>
-					<div class="row">
-						<div class="col-sm-4">
+					<div class="row" >
+						<div class="col-sm-4" style="background-color:#FFFFFF">
 							<form id="frmCategorias">
+								<br>
 								<label>Categoria</label>
 								<input type="text" class="form-control input-sm" name="categoria" id="categoria">
 								<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>
@@ -39,7 +40,7 @@ if(isset($_SESSION['usuario'])){
 				<?php 
 				endif;
 				?>
-				<div class="col-sm-6">
+				<div class="col-sm-6" >
 					<div id="tablaCategoriaLoad"></div>
 				</div>
 		</div>

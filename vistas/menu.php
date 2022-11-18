@@ -12,7 +12,7 @@
  <div>
     <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
       <div class="container">
-        <a title="INICio" href="inicio.php"><img src="../img/logo.png" height="50" alt="Foto de logo no encontrada"/></a>
+        <h1 style="color: #FFFFFF"><a title="INICio" href="inicio.php"><img src="../img/logo.png" height="50" alt="Foto de logo no encontrada"/></a>SISTEMA DE INVENTARIO</h1>
         <div id="navbar" class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-left">

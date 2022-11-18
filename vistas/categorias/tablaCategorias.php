@@ -10,13 +10,15 @@
 			$result=mysqli_query($conexion,$sql);
 	 ?>
 
-
+<div style="background-color:#FFFFFF">
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	<caption><label>Categorias</label></caption>
+	<caption><label>CATEGORIAS</label></caption>
 	<tr>
+		<td></td>
 		<td>Categoria</td>
 		<td>Editar</td>
 		<td>Eliminar</td>
+		<td></td>
 	</tr>
 
 	<?php
@@ -24,6 +26,7 @@
 	 ?>
 
 	<tr>
+		<td></td>
 		<td><?php echo $ver[1] ?></td>
 		<td>
 			<span class="btn btn-warning btn-xs" data-toggle="modal" data-target="#actualizaCategoria" onclick="agregaDato('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')">
@@ -35,7 +38,10 @@
 				<span class="glyphicon glyphicon-remove"></span>
 			</span>
 		</td>
+		<td></td>
 	</tr>
 
 <?php endwhile; ?>
 </table>
+<br>
+</div>

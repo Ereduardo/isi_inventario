@@ -7,9 +7,10 @@ $conexion=$c->conexion();
 
 
 
-<div class="row" style="background-color:#FFFFFF">
-<h4>.Vender un producto</h4>
-	<div class="col-sm-4">
+<div class="row">
+
+	<div class="col-sm-4" style="background-color:#FFFFFF">
+	<h4>Vender un producto</h4>
 		<form id="frmVentasProductos">
 			<label>Producto</label>
 			<select class="form-control input-sm" id="productoVenta" name="productoVenta">

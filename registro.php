@@ -21,9 +21,18 @@
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
 	<script src="librerias/jquery-3.2.1.min.js"></script>
 	<script src="js/funciones.js"></script>
+	<style>
+			body {
+				background: url("img/fondo.jpg"); 
+				background-size: cover;
+				background-repeat: repeat;
+				margin: 0;
+				height: 100vh;
+			}
+  		</style>
 
 </head>
-<body style="background: url(img/fondo.jpg);">
+<body>
 	<br><br><br>
 	<div class="container">
 		<div class="row">

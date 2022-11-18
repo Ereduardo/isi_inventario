@@ -29,14 +29,14 @@ if(isset($_SESSION['usuario'])){
 		</style>
 	</head>
 	<body>
-		<div class="container" style="background-color:#FFFFFF">
-			<h3><b>AGREGA UN</b></h3>
-			<h3><b>PRODUCTO NUEVO</b></h3>
+		<div class="container">
 			<div class="row">
 				<?php
 					if($_SESSION['usuario']=="admin"):
 				?>
-					<div class="col-sm-4">
+					<div class="col-sm-4" style="background-color:#FFFFFF">
+					<h3><b>AGREGA UN</b></h3>
+					<h3><b>PRODUCTO NUEVO</b></h3>
 						<form id="frmArticulos" enctype="multipart/form-data">
 							<label>Categoria</label>
 							<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
@@ -57,7 +57,7 @@ if(isset($_SESSION['usuario'])){
 							<input type="file" id="imagen" name="imagen">
 							<p></p>
 							<span id="btnAgregaArticulo" class="btn btn-primary">AGREGAR EL PRODUCTO</span>
-							
+							<p></p>
 						</form>
 					</div>
 				<?php 

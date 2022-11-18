@@ -15,7 +15,7 @@
 	?>
 
 <div class="row" style="background-color:#FFFFFF">
-	<h4>.Ventas</h4>
+	<h4>.VENTAS REALIZADAS</h4>
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10">
 		<div class="table-responsive">

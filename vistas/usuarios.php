@@ -15,13 +15,14 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 				margin: 0;
 				height: 100vh;
 			}
-  </style>
+  		</style>
 	</head>
 	<body>
-		<div class="container" style="background-color:#FFFFFF">
-			<h1>Administrar usuarios</h1>
+		<div class="container">
+			
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-4" style="background-color:#FFFFFF">
+				<h1>ADMINISTRAR USUARIO</h1> 
 					<form id="frmRegistro">
 						<label>Nombre</label>
 						<input type="text" class="form-control input-sm" name="nombre" id="nombre">
